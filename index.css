@@ -1,0 +1,224 @@
+:root {
+  /* Primary */
+  --Blue: hsl(223, 87%, 63%);
+  /* Secondary */
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  /* Neutral */
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+  /* fonts */
+  --ff-sans: "Libre Franklin", Arial, sans-serif;
+}
+/* --------------------------------------------------------- Resets / Global / Main 
+-------------------------------------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: var(--ff-sans);
+  font-size: 20px;
+  background-color: hsl(0, 0%, 100%);
+  margin: 0;
+  min-height: 100vh;
+}
+input,
+button {
+  font: inherit;
+  outline: none;
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+main,
+header,
+footer {
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+  max-width: 600px;
+}
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+/* --------------------------------------------------------- Header
+-------------------------------------------------------------------------------------------------------- */
+header {
+  padding: 5rem 0 4rem;
+}
+.logo {
+  margin-bottom: 40px;
+}
+.title {
+  color: var(--Very-Dark-Blue);
+  font-size: clamp(1.15rem, 7.8vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.title .gray-txt {
+  color: var(--Gray);
+  font-weight: 300;
+}
+.desc {
+  line-height: 1;
+  color: var(--Very-Dark-Blue);
+  font-weight: 300;
+  font-size: clamp(0.85rem, 4vw, 1rem);
+  margin-bottom: 40px;
+}
+/* ---------------------------------------- Email Input */
+.input-message-cont {
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+}
+#userEmail {
+  width: 100%;
+  border: 1px solid var(--Pale-Blue);
+  border-radius: 30px;
+  color: var(--Blue);
+  font-weight: 700;
+  font-size: 0.825rem;
+  padding: 0.75rem 2rem;
+}
+.invalid-email-txt {
+  color: var(--Light-Red);
+  line-height: 0;
+  margin: 5px 0 20px;
+  font-weight: 300;
+  font-size: 0.6rem;
+}
+#userEmail[aria-invalid="true"] {
+  border: 1.5px solid var(--Light-Red);
+}
+#userEmail[aria-invalid="true"]::placeholder {
+  color: var(--Light-Red);
+  font-weight: 300;
+  opacity: 1;
+}
+
+#userEmail[aria-invalid="true"]:-ms-input-placeholder {
+  font-weight: 300;
+  color: var(--Light-Red);
+}
+
+#userEmail[aria-invalid="true"]::-ms-input-placeholder {
+  font-weight: 300;
+  color: var(--Light-Red);
+}
+#userEmail::placeholder {
+  color: var(--Pale-Blue);
+  font-weight: 300;
+  opacity: 1;
+}
+
+#userEmail:-ms-input-placeholder {
+  font-weight: 300;
+  color: var(--Pale-Blue);
+}
+
+#userEmail::-ms-input-placeholder {
+  font-weight: 300;
+  color: var(--Pale-Blue);
+}
+/* ------------------------------------- Email Submit */
+#submitEmail {
+  border: 0;
+  width: 100%;
+  border-radius: 30px;
+  color: hsl(0, 0%, 100%);
+  background-color: var(--Blue);
+  font-weight: 600;
+  box-shadow: 0 0.4rem 8px hsla(223, 87%, 63%, 0.3);
+  font-size: 0.825rem;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+}
+#submitEmail:hover,
+#submitEmail:focus {
+  background-color: hsla(223, 87%, 63%, 0.8);
+}
+@media (min-width: 600px) {
+  header {
+    padding: 4rem 0;
+  }
+  .title {
+    line-height: 0.5;
+  }
+  .input-message-cont {
+    margin-right: auto;
+    width: 60%;
+  }
+  #userEmail {
+    padding: 0.75rem 1rem;
+  }
+  #submitEmail {
+    margin-left: 4%;
+    padding: 0.75rem 0;
+    width: 35%;
+  }
+  .invalid-email-txt {
+    text-align: left;
+    padding: 0 1rem;
+    margin: 5px 0 0;
+  }
+}
+/* --------------------------------------------------------- Main
+-------------------------------------------------------------------------------------------------------- */
+main {
+  margin-bottom: 120px;
+}
+@media (min-width: 600px) {
+  main {
+    margin-bottom: 50px;
+  }
+}
+/* --------------------------------------------------------- Footer
+-------------------------------------------------------------------------------------------------------- */
+.social-cont {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  gap: 1rem;
+  margin-bottom: 2em;
+}
+.social-cont i {
+  font-size: 1.125em;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: var(--Blue);
+  border: 1px solid hsla(223, 100%, 88%, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out, color 300ms linear;
+}
+.social-cont i:hover {
+  background-color: var(--Blue);
+  color: hsl(0, 0%, 100%);
+}
+.copy-txt {
+  padding-bottom: 1.5em;
+  color: var(--Gray);
+  font-size: 0.75em;
+}
+@media (min-width: 600px) {
+  footer {
+    font-size: 15px;
+  }
+  .social-cont {
+    margin-bottom: 1em;
+  }
+  .social-cont i {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+  }
+  .copy-txt {
+    font-size: 1em;
+    padding: 0;
+  }
+}
