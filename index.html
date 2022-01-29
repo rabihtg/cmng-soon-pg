@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c18ac3383c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="PING logo" class="logo" />
+      <h1 class="title">
+        <span class="gray-txt">We are launching</span> soon!
+      </h1>
+      <p class="desc">Subscribe and get notified</p>
+      <div class="form-cont">
+        <form action="" novalidate>
+          <span class="input-message-cont">
+            <input
+              type="email"
+              name="userEmail"
+              id="userEmail"
+              placeholder="Your email address..."
+              autocomplete="off"
+              spellcheck="false"
+              aria-invalid="false"
+            />
+            <span class="invalid-email-txt" hidden>
+              <i> Please provide a valid email address</i>
+            </span>
+          </span>
+          <button type="submit" id="submitEmail">Notify Me</button>
+        </form>
+      </div>
+    </header>
+    <main>
+      <img
+        src="./images/illustration-dashboard.png"
+        alt="PING's illustration dashboard"
+      />
+    </main>
+    <footer>
+      <div class="social-cont">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+      <p class="copy-txt">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
